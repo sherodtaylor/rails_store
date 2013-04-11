@@ -15,9 +15,16 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @id = params[:id]
+    p = Product.new
     @product = Product.find(@id)
     @review = Review.new
     @product_reviews = Review.where(:product_id => @id)
+    @list = p.google(@product.name)
+    @picture = @list['items'][0]['product']['images'][0]['link']
+    @link = @list['items'][0]['product']['link']
+    @description = @list['items'][0]['product']['description']
+    @average = @product_reviews.average('rating')
+
 
     respond_to do |format|
       format.html # show.html.erb

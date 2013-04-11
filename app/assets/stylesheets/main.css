@@ -1,0 +1,72 @@
+form {
+  margin 10px;
+}
+textarea { 
+  width: 70%;
+  height: 100px;
+
+}
+.review-wrapper {
+  border-style: solid;
+  border-width: 5px;
+}
+button {
+  width: 100%;
+  height: auto
+}
+.header {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 200px;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  padding: 50px 0 0 0;
+}
+
+nav {
+margin: 30px;
+}
+
+nav ul {
+list-style-type: none;
+text-align: center;
+
+}
+
+nav li {
+height: 25px;
+display: inline;
+margin-right: 0px;
+border-right: 1px solid #aaa;
+padding: 0 20px;
+}
+
+nav li:last-child {
+border-right: none;
+}
+
+nav li a {
+text-decoration: none;
+color: #ccc;
+font: 25px/1 Helvetica, Verdana, sans-serif;
+text-transform: uppercase;
+
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+transition: all 0.5s ease;
+}
+
+nav li a:hover {
+color: #666;
+}
+
+nav li.active a {
+font-weight: bold;
+color: #333;
+}
+

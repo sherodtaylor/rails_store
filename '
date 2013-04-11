@@ -5,29 +5,29 @@
       <b>Name:</b>
       <%= @product.name %>
     </p>
-    <p>
-      <b>Average Rating:</b>
-    <%= @average %>
-    </p>
 
     <p>
       <b>Price:</b>
-      <%= number_to_currency(@product.price) %>
+      <%= @product.price %>
     </p>
     <b>Description:</b>
     <p><%= @description %></p>
-    <%= link_to 'Edit', edit_product_path(@product) %> |
-    <%= link_to 'Back', products_path %>
+    <a href="<%= @link %> ">link to buy</a>
   </div>
-  <div class="col7">
+  <div class="col4">
     <img  src="<%= @picture %>"/>
-    <a  href="<%= @link %> ">buy now</a>
+  </div>
+  <div class="col3 ">
     <%= render 'products/reviews' %>
   </div>
   <div class="col2 last">
-    <%= render 'products/list'  %>
+    <%= render 'products/reviews' %>
   </div>
+
 </div>
+    <%= render 'products/list'  %>
 
 
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
     

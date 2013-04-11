@@ -20,8 +20,9 @@
     <%= f.text_field :rating %>
   </div>
   <div class="field">
-    <%= f.label :product_id %><br />
-    <%= f.text_field :product_id %>
+    <% products_array = Product.all.map{|products| [products.id, products.name] } %>
+    <%= f.label :products %>
+    <%= options_for_select(products_array) %>
   </div>
   <div class="actions">
     <%= f.submit %>

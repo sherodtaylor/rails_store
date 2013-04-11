@@ -25,11 +25,8 @@ class ReviewsController < ApplicationController
   # GET /reviews/new.json
   def new
     @review = Review.new
+    @all_reviews = Review.all
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @review }
-    end
   end
 
   # GET /reviews/1/edit

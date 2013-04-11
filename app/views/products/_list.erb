@@ -1,19 +1,22 @@
+<% if @product_reviews.empty? %>
+  <h2>Be the first to Review</h2>
+<% else %>
 <h2>Reviews for <%= @product.name %></h2>
-<% @product_reviews.each do |review| %>
-  <h3>Review <%= review.id %></h3>
-<p>
-  <b>Body:</b>
-  <%= review.body %>
-</p>
-
-<p>
-  <b>Rating:</b>
-  <%= review.rating %>
-</p>
-
-<p>
-  <b>Product:</b>
-  <%= review.product_id %>
-</p>
 <% end %>
+  <% @product_reviews.each do |review| %>
+   <div class="rowone">
+     <div class="review-wrapper">
+        <p>
+          <b>Body:</b>
+          <%= review.body %>
+        </p>
+
+        <p>
+          <b>Rating:</b>
+          <%= review.rating %>
+        </p>
+      </div>
+    </div>
+        <% end %>
+       
 
