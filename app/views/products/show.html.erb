@@ -22,7 +22,8 @@
     <%= link_to 'Back', products_path %>
   </div>
   <div class="col7">
-    <img  src="<%= @picture %>"/>
+    <%= image_tag @product.image_url %>
+  </div>
   </div>
   <div class="col2 last">
     <%= render 'products/shopping_cart'  %>

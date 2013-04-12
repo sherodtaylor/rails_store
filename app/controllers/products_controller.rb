@@ -56,6 +56,11 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(params[:product])
+    @list = @product.google(@product.name)
+    @picture = @list['items'][0]['product']['images'][0]['link']
+    @link = @list['items'][0]['product']['link']
+    @description = @list['items'][0]['product']['description']
+    @product.image_url = @picture
 
     respond_to do |format|
       if @product.save

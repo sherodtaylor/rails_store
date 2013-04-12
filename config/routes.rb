@@ -1,6 +1,8 @@
 RailsStore::Application.routes.draw do
-  resources :reviews
-
+  resources :reviews, :only => [:new, :show, :edit, :create]
+  # match '/reviews/new' => 'reviews#new'
+  # get 'reviews/:id/show'
+  # get 'reviews/:id/edit'
 
   resources :products
 
