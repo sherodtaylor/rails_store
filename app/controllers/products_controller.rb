@@ -1,10 +1,13 @@
 class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
+  before_filter :products_array
+
+  def products_array
+    @products = Product.all.to_a
+  end
+
   def index
-    @products = Product.all
-
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @products }
@@ -23,6 +26,7 @@ class ProductsController < ApplicationController
     @picture = @list['items'][0]['product']['images'][0]['link']
     @link = @list['items'][0]['product']['link']
     @description = @list['items'][0]['product']['description']
+    # @total = @products.map{|sum, n| sum + n }
     @average = @product_reviews.average('rating')
 
 

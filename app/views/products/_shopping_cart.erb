@@ -1,0 +1,12 @@
+<div id="shopping-cart">
+  <% in_cart_items.each do |product| %>
+  <p>
+    <b><%= product.name %>:</b>
+      <%= number_to_currency(product.price) %>
+  </p>
+  <% end %>
+  <p>
+    <b>Total:</b>
+  <%= number_to_currency(total) %>
+  </p>
+</div>

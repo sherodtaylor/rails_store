@@ -9,25 +9,31 @@
       <b>Average Rating:</b>
     <%= @average %>
     </p>
-
     <p>
       <b>Price:</b>
       <%= number_to_currency(@product.price) %>
     </p>
-    <b>Description:</b>
-    <p><%= @description %></p>
+    <p>
+      <b>Description:</b>
+      <%= @product.description %>
+    </p>
+
     <%= link_to 'Edit', edit_product_path(@product) %> |
     <%= link_to 'Back', products_path %>
   </div>
   <div class="col7">
     <img  src="<%= @picture %>"/>
-    <a  href="<%= @link %> ">buy now</a>
-    <%= render 'products/reviews' %>
   </div>
   <div class="col2 last">
-    <%= render 'products/list'  %>
+    <%= render 'products/shopping_cart'  %>
+    <%= render 'products/cart_form' %>
   </div>
 </div>
+  <div class="row">
+    <div class="col12 last">
+    <%= render 'products/list'  %>
+    </div>
+  </div>
 
 
     
