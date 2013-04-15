@@ -4,12 +4,14 @@
   <title>Rails Store</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <link href='http://fonts.googleapis.com/css?family=Signika+Negative:600|Yesteryear' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <nav>
   <ul>
     <li><%= link_to "Products", products_path %></li>
+    <li><%= link_to "New Product", new_product_path %></li>
   </ul>
 </nav>
 

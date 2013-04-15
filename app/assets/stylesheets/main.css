@@ -1,34 +1,58 @@
 #shopping-cart {
   border-style: solid;
-  border-width: 2px;
+  border-width: 5px;
+  border-radius: 10px;
   padding: 10px;
 }
-form {
-  margin 10px;
+.col5 {
+  margin: 500px;
+}
+p {
+  font-family: 'Signika Negative', sans-serif;
 }
 textarea { 
-  width: 70%;
-  height: 100px;
-
+  width: 100%;
+  border-radius: 10px;
+  height: 50px;
+}
+input {
+  border-radius: 10px;
+}
+h1 {
+  font-size: 30px;
+  font-family: 'Yesteryear', cursive;
+ 
 }
 .review-wrapper {
   border-style: solid;
   border-width: 5px;
+  padding: 5px;
+  border-radius: 10px;
+}
+.review-wrapper p {
+  padding: 5px;
 }
 button {
   width: 100%;
-  height: auto
+  height: auto;
 }
 .header {
   background-color: rgba(0, 0, 0, 0.7);
   height: 200px;
   margin: 0;
 }
+.col3 h3 {
+  font-size: 20px;
+}
 
 h1 {
   text-align: center;
   font-size: 50px;
   padding: 50px 0 0 0;
+}
+ul img {
+  height: 150px;
+  width: 100%;
 }
 
 nav {
@@ -42,7 +66,7 @@ text-align: center;
 }
 
 nav li {
-height: 25px;
+height: 50px;
 display: inline;
 margin-right: 0px;
 border-right: 1px solid #aaa;
@@ -54,24 +78,13 @@ border-right: none;
 }
 
 nav li a {
+font-size: 50px;
 text-decoration: none;
-color: #ccc;
-font: 25px/1 Helvetica, Verdana, sans-serif;
+font-family: 'Yesteryear', cursive;
 text-transform: uppercase;
 
--webkit-transition: all 0.5s ease;
--moz-transition: all 0.5s ease;
--o-transition: all 0.5s ease;
--ms-transition: all 0.5s ease;
-transition: all 0.5s ease;
 }
 
-nav li a:hover {
-color: #666;
-}
 
-nav li.active a {
-font-weight: bold;
-color: #333;
 }
 

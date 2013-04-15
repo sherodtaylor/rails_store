@@ -1,10 +1,8 @@
-<div class="rowone">
 <% if @product_reviews.empty? %>
   <h2>Be the first to Review</h2>
 <% else %>
 <h2>Reviews for <%= @product.name %></h2>
 <% end %>
-<%= render 'products/reviews' %>
   <% @product_reviews.each do |review| %>
      <div class="review-wrapper">
         <p>
@@ -17,7 +15,8 @@
           <%= review.rating %>
         </p>
       </div>
+      <br />
 <% end %>
-</div>
+<%= render 'products/reviews' %>
        
 

@@ -1,19 +1,20 @@
-<h1>Listing products</h1>
-
 <div class='onerow'>
+    <br />
+    <br />
+  <div class="col10">
+  <ul>
 <% @products.each do |product| %>
-    <div class='col4'>
-      <%= image_tag product.image_url %>
-
-      <%= product.name %>
-      <%= product.price %>
-      <%= link_to 'Show', product %>
+    <div class='col3'>
+      <h3><%= product.name %></h3>
+      <h3><%= '$' + product.price.to_s %></h3>
+      <%= link_to image_tag(product.image_url), product %>
       <%= link_to 'Edit', edit_product_path(product) %>
-  <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
 <% end %>
-</div>
-<div class="onerow">
-<%= link_to 'New Product', new_product_path %>
+  </ul>
+  </div>
+  <div class="col2 last">
     <%= render 'products/shopping_cart'  %>
+  </div>
 </div>
